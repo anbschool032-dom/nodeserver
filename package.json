@@ -1,0 +1,27 @@
+{
+  "name": "nodekh",
+  "version": "1.0.0",
+  "description": "learn basic node js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon sever.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anbschool032-dom/nodeserver.git"
+  },
+  "keywords": [
+    "intro",
+    "node"
+  ],
+  "author": "dom",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anbschool032-dom/nodeserver/issues"
+  },
+  "homepage": "https://github.com/anbschool032-dom/nodeserver#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
