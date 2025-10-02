@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{pageTitle}}</title>
+    <link rel="stylesheet" href="/Css/main.css">
+    <!-- <link rel="stylesheet" href="/Css/Product.css"> -->
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/">Khmer Shop</a></li>
+          <li><a href="/admin/create_products">Create Products</a></li>
+        </ul>
+      </nav>
+      <main>
+        {{!-- <h1>My Products</h1>
+        <p>List of all the Products...</p> --}}
+        {{#if someProducts}}
+        <div class="product-container">
+            {{#each prods}}
+          <article>
+            <header>
+              {{!-- <h1>Super Car</h1> --}}
+              <h1>{{this.title}}</h1>
+            </header>
+            <div class="product-image">
+              <img src="https://i.pinimg.com/1200x/df/78/55/df785519f9969cba789c16d9a95d69d4.jpg" alt="">
+            </div>
+            <div class="product-details">
+              <h2>20$</h2>
+              <p>Very good car</p>
+            </div>
+            <button>
+              Add To Cart
+            </button>
+          </article>
+          {{/each}}
+        </div>
+        {{else}}
+            <h1>Don't Have Products Bro!</h1>
+        {{/if}}
+      </main>
+    </header>
+  </body>
+</html>

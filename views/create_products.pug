@@ -1,0 +1,10 @@
+extends mainlayout/main-layout.pug 
+block style 
+      link(rel='stylesheet' href='/Css/Product.css')
+block content 
+    main
+      form(action='/admin/create_products' method='POST')
+        .form-control
+          label(for='title') Title
+          input(type='text' name='title' id='title')
+        button(type='submit') Create Products

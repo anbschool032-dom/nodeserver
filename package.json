@@ -2,7 +2,7 @@
   "name": "nodekh",
   "version": "1.0.0",
   "description": "learn basic node js",
-  "main": "server.js",
+  "main": "sever.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon sever.js"
@@ -23,5 +23,12 @@
   "homepage": "https://github.com/anbschool032-dom/nodeserver#readme",
   "devDependencies": {
     "nodemon": "^3.1.10"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-handlebars": "3.0",
+    "pug": "^3.0.3"
   }
 }

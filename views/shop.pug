@@ -1,0 +1,20 @@
+extends mainlayout/main-layout.pug 
+block style 
+      link(rel='stylesheet' href='/Css/Product.css')
+block content 
+    main
+      if prods.length > 0
+        .product-container 
+        each product in prods
+          article
+            header 
+            //- h1=product.title 
+            h1 #{product.title}
+            .product-image
+              img(src='https://i.pinimg.com/1200x/25/8c/4d/258c4dd5ccc880d87d8100c8fa3f31f4.jpg' alt='Super Car')
+            .product-details 
+              h2 1000$
+              p Very Good 
+            button Add to Cart
+      else 
+        h1  No Products

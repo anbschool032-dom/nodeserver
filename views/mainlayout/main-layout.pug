@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title #{pageTitle}
+        link(rel='stylesheet' href='/Css/main.css')
+        block style 
+    body 
+    header 
+        nav 
+            ul 
+                li 
+                    a(href='/', class=(path ==='/' ? 'active':'')) Khmer Shop
+                li 
+                    a(href='/admin/create_products', class=(path === '/admin/create_products' ? 'active':'')) Create Products
+    
+    block content 
+
+    
