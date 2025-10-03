@@ -2,19 +2,12 @@
 const path = require('path');
 const express = require('express');
 const router = express.Router();
-const rootDirect = require('../util/path');
-const adminData = require('./admin')
-router.get('/',(req,res,next)=>{
-    const products = adminData.products
-    // res.render('shop',{prods: products, pageTitle: 'Shop KH', path:'/'});
-    res.render('shop',
-        {prods: products, 
-            pageTitle: 'Shop KH', 
-            path:'/',someProducts: products.length >0,
-            activeShop: true,
-            productCss: true,
-            layout:false
-        });
 
-})
+const shopController = require('../controllers/shop');
+router.get('/', shopController.getIndex);
+
+router.get('/products', shopController.getShopProduct);
+router.get('/cart', shopController.getCart);
+router.get('/checkout', shopController.getCheckout);
+
 module.exports = router;

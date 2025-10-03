@@ -1,9 +1,9 @@
-<%- include('includes/head.ejs')%>
+<%- include('../includes/head.ejs')%>
     <link rel="stylesheet" href="/Css/main.css">
     <!-- <link rel="stylesheet" href="/Css/Product.css"> -->
   </head>
   <body>
-    <%- include('includes/navigation.ejs') %>
+    <%- include('../includes/navigation.ejs') %>
      <main>
             <h1>My Products</h1>
             <p>List of all the Products...</p>
@@ -15,11 +15,11 @@
                 <h1><%= product.title %></h1>
                 </header>
                 <div class="product-image">
-                <img src="https://i.pinimg.com/1200x/df/78/55/df785519f9969cba789c16d9a95d69d4.jpg" alt="">
+                <img src="<%= product.imageUrl %>" alt="<%= product.title %>">
                 </div>
                 <div class="product-details">
-                <h2>20$</h2>
-                <p>Very good car</p>
+                <h2>$<%= product.price %></h2>
+                <p><%= product.description%></p>
                 </div>
                 <button>
                 Add To Cart
@@ -31,4 +31,4 @@
                 <h1>Can't found</h1>
             <%} %>
         </main>
-<%- include('includes/end.ejs')%>
+<%- include('../includes/end.ejs')%>
